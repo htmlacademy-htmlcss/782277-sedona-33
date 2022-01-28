@@ -1,0 +1,21 @@
+.header-index-logo {
+  background-color: #E5E5E5;
+  background-image:
+    url("../images/mask.svg"),
+    url("../images/background-index.jpg");
+  background-repeat:
+    no-repeat,
+    no-repeat;
+}
+
+.subscribe-index {
+  background-color: #E5E5E5;
+  background-image: url("../images/background-index-subscribe.jpg");
+  background-repeat: no-repeat;
+}
+
+.header-catalog {
+  background-color: #E5E5E5;
+  background-image: url("../images/background-catalog-search.jpg");
+  background-repeat: no-repeat;
+}
