@@ -1,21 +1,31 @@
 .header-index-logo {
-  background-color: #E5E5E5;
+  background-color: #83B3D3;
   background-image:
     url("../images/mask.svg"),
     url("../images/background-index.jpg");
   background-repeat:
     no-repeat,
     no-repeat;
+  background-position:
+    bottom,
+    center;
+  background-size:
+    contain,
+    cover;
 }
 
 .subscribe-index {
-  background-color: #E5E5E5;
+  background-color: #8AAAB8;
   background-image: url("../images/background-index-subscribe.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .header-catalog {
-  background-color: #E5E5E5;
+  background-color: #6082A8;
   background-image: url("../images/background-catalog-search.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
