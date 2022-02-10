@@ -28,17 +28,17 @@
 
         <ul class="user-navigation">
           <li class="user-navigation-item">
-            <button class="user-navigation-button" type="button">
+            <button class="button user-navigation-button search" type="button">
               <span class="visually-hidden">Поиск</span>
             </button>
           </li>
           <li class="user-navigation-item">
-            <a class="user-navigation-link" href="#">
+            <a class="button user-navigation-button favorite" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="user-navigation-item">
-            <a class="button user-navigation-link" href="#">Хочу сюда!</a>
+            <a class="button user-navigation-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -111,11 +111,11 @@
           <fieldset class="search-form-group">
             <legend class="search-form-title">Стоимость, ₽:</legend>
             <div class="cost">
-              <label class="cost-control">
+              <label class="control cost-control">
                 <input class="cost-input" type="text" name="min-price" value="0">
                 от
               </label>
-              <label class="cost-control">
+              <label class="control cost-control">
                 <input class="cost-input" type="text" name="max-price" value="9000">
                 до
               </label>
@@ -132,8 +132,8 @@
           </fieldset>
 
           <div class="search-form-group">
-            <button class="search-form-button" type="submit">Применить</button>
-            <button class="search-form-button" type="reset">Сбросить</button>
+            <button class="button search-form-button button-apply" type="submit">Применить</button>
+            <button class="button search-form-button button-reset" type="reset">Сбросить</button>
           </div>
         </form>
       </header>
@@ -182,8 +182,8 @@
               <p class="residence-cost">От 4000 ₽</p>
             </div>
             <div class="residence-control">
-              <a class="residence-button" href="#">Подробнее</a>
-              <button class="residence-button" type="button">В избранное</button>
+              <a class="button residence-button" href="#">Подробнее</a>
+              <button class="button residence-button residence-button-add" type="button">В избранное</button>
             </div>
             <div class="residence-rating">
               <span class="residence-star visually-hidden">4 звезды</span>
@@ -201,8 +201,8 @@
               <p class="residence-cost">От 3000 ₽</p>
             </div>
             <div class="residence-control">
-              <a class="residence-button" href="#">Подробнее</a>
-              <button class="residence-button" type="button">В избранное</button>
+              <a class="button residence-button" href="#">Подробнее</a>
+              <button class="button residence-button residence-button-add" type="button">В избранное</button>
             </div>
             <div class="residence-rating">
               <span class="residence-star visually-hidden">3 звезды</span>
@@ -220,8 +220,8 @@
               <p class="residence-cost">От 2000 ₽</p>
             </div>
             <div class="residence-control">
-              <a class="residence-button" href="#">Подробнее</a>
-              <button class="residence-button residence-button-added" type="button">В избранном</button>
+              <a class="button residence-button" href="#">Подробнее</a>
+              <button class="button residence-button residence-button-added" type="button">В избранном</button>
             </div>
             <div class="residence-rating">
               <span class="residence-star visually-hidden">2 звезды</span>
@@ -239,8 +239,8 @@
               <p class="residence-cost">От 3000 ₽</p>
             </div>
             <div class="residence-control">
-              <a class="residence-button" href="#">Подробнее</a>
-              <button class="residence-button" type="button">В избранное</button>
+              <a class="button residence-button" href="#">Подробнее</a>
+              <button class="button residence-button residence-button-add" type="button">В избранное</button>
             </div>
             <div class="residence-rating">
               <span class="residence-star visually-hidden">2 звезды</span>
@@ -259,7 +259,7 @@
 
         <ul class="page-control-item pagination">
           <li class="pagination-item">
-            <a class="pagination-link" href="#">1</a>
+            <a class="pagination-link pagination-link-curent" href="#">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
