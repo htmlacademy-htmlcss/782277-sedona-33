@@ -49,6 +49,13 @@ body {
 }
 
 .user-navigation-button {
+  text-transform: none;
+  color: #000000;
+  background-color: #FFFFFF;
+  border: none;
+}
+
+.user-navigation-link {
   line-height: 20px;
 }
 
