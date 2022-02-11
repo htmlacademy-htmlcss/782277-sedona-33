@@ -52,7 +52,7 @@ body {
   text-transform: none;
   color: #000000;
   background-color: #FFFFFF;
-  border: none;
+  border: 0;
 }
 
 .user-navigation-link {
@@ -260,7 +260,7 @@ body {
   line-height: 23px;
   text-transform: none;
   background-color: transparent;
-  border: none;
+  border: 0;
 }
 
 /* sort */
@@ -276,7 +276,7 @@ body {
 .sort-view-link {
   text-decoration: none;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 /* residence */
