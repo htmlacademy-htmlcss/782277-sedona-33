@@ -1,0 +1,561 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #F2F2F2;
+}
+
+.button {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #756257;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+  color: #333333;
+  background-color: #FFFFFF;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+/* index page */
+
+/* main-header */
+
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  width: 139px;
+  margin-right: 30px;
+}
+
+.site-navigation {
+  width: 500px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navigation-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.user-navigation {
+  max-width: 320px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.user-navigation-link {
+  line-height: 20px;
+}
+
+.user-navigation-button {
+  text-transform: none;
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 0;
+}
+
+.user-navigation-link {
+  display: block;
+  width: 130px;
+  padding: 9px 15px;
+}
+
+/* header-index */
+
+.header-index {
+  margin-bottom: 31px;
+}
+
+.header-index-logo {
+  margin-bottom: 63px;
+  padding: 51px 371px 82px;
+  background-color: #83B3D3;
+  background-image:
+    url("../images/mask.svg"),
+    url("../images/background-index.jpg");
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-position:
+    bottom,
+    center;
+  background-size:
+    contain,
+    cover;
+}
+
+.header-index-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.header-index-slogan {
+  width: 720px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* advantages */
+
+.advantages {
+  margin-bottom: 91px;
+}
+
+.advantages-text {
+  width: 720px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-counter {
+  text-align: center;
+}
+
+.advantages-description {
+  text-align: center;
+}
+
+.advantages-item-large {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+}
+
+.advantages-item-small {
+  width: 400px;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-small:nth-child(even) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-small .advantages-title {
+  color: #000000;
+}
+
+.advantages-sublist {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  background-color: #FFFFFF;
+  list-style: none;
+}
+
+.advantages-subitem {
+  width: 400px;
+}
+
+.advantages-subitem:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-subitem .advantages-title {
+  color: #000000;
+}
+
+/* search */
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 93px;
+}
+
+.search-slogan {
+  width: 720px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.search-text {
+  width: 720px;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.search-button {
+  width: 575px;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* subscribe */
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe-index {
+  color: #FFFFFF;
+  background-color: #8AAAB8;
+  background-image: url("../images/background-index-subscribe.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.subscribe-title {
+  width: 720px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subscribe-text {
+  width: 720px;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.subscribe-form-email {
+  width: 600px;
+}
+
+.subscribe-form-button {
+  width: 200px;
+  font-size: 20px;
+  line-height: 26px;
+  background-color: #83B3D3;
+}
+
+/* main-footer */
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.social-list {
+  max-width: 150px;
+  list-style: none;
+}
+
+.social-button {
+  text-align: center;
+  text-decoration: none;
+  color: #333333;
+}
+
+.contacts-tel {
+  width: 720px;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.logo-partner {
+  width: 115px;
+}
+
+
+/* catalog page */
+
+/* header-catalog */
+
+.header-catalog {
+  padding: 54px 72px 85px;
+  margin-bottom: 44px;
+  color: #FFFFFF;
+  background-color: #6082A8;
+  background-image: url("../images/background-catalog-search.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.catalog-title {
+  width: 528px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+/* breadcrumbs */
+
+.breadcrumbs {
+  max-width: 528px;
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/* search-form */
+
+.search-form {
+  display: flex;
+  width: 1060px;
+}
+
+.search-form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.control {
+  line-height: 23px;
+}
+
+.button-apply {
+  background-color: #83B3D3;
+}
+
+.button-reset {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* catalog-main */
+
+.catalog-container {
+  display: flex;
+  flex-direction: column;
+  width: 1056px;
+  margin: 0 auto;
+  margin-bottom: 43px;
+}
+
+/* sort */
+
+.sort {
+  display: flex;
+  width: 1056px;
+}
+
+/* !!!Временное решение, удалю, когда пропишем стили для класса visually-hidden */
+.sort h2 {
+  display: none;
+}
+
+.sort-title {
+  max-width: 350px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sort-list {
+  width: 287px;
+  margin-right: 81px;
+  margin-left: auto;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+}
+
+.sort-view {
+  width: 160px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sort-view-link {
+  text-decoration: none;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+/* residence */
+
+.residence-link {
+  text-decoration: none;
+}
+
+.residence-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+}
+
+.residence-about {
+  line-height: 23px;
+}
+
+.residence-button-add {
+  background-color: #83B3D3;
+}
+
+.esidence-button-added {
+  background-color: #7DB54F;
+}
+
+.residence-value {
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #F2F2F2;
+}
+
+/* page-control */
+
+.page-control {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* !!!Временное решение, удалю, когда пропишем стили для класса visually-hidden */
+.page-control h2 {
+  display: none;
+}
+
+.page-control-button {
+  width: 1056px;
+}
+
+.control-button {
+  display: block;
+  width: 620px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 26px;
+  background-color: #83B3D3;
+}
+
+.page-control-pagination {
+  max-width: 525px;
+  list-style: none;
+}
+
+.pagination-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+}
+
+.pagination-link-curent {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.page-control-view {
+  width: 386px;
+}
+
+.page-view-title {
+  line-height: 23px;
+}
+
+.page-view-list {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+}
