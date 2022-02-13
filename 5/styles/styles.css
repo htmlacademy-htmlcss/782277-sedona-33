@@ -30,6 +30,19 @@ body {
   background-color: #F2F2F2;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button {
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
@@ -173,6 +186,9 @@ body {
 }
 
 .advantages-title {
+  width: 180px;
+  margin: 0 auto;
+  margin-bottom: 29px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -181,23 +197,40 @@ body {
 }
 
 .advantages-counter {
+  margin: 0;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .advantages-description {
+  margin: 0;
   text-align: center;
 }
 
 .advantages-item-large {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   width: 1200px;
   color: #FFFFFF;
   background-color: #83B3D3;
 }
 
+.advantages-item-large:nth-child(2) .image-column {
+  order: -1;
+}
+
+.description-column {
+  width: 250px;
+  padding: 98px 75px 87px;
+}
+
+.advantages-img {
+  display: block;
+}
+
 .advantages-item-small {
-  width: 400px;
+  width: 250px;
+  padding: 98px 75px 108px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -220,7 +253,8 @@ body {
 }
 
 .advantages-subitem {
-  width: 400px;
+  width: 250px;
+  padding: 184px 75px 79px;
 }
 
 .advantages-subitem:nth-child(odd) {
@@ -242,6 +276,8 @@ body {
 
 .search-slogan {
   width: 720px;
+  margin: 0;
+  margin-bottom: 29px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -252,6 +288,8 @@ body {
 
 .search-text {
   width: 720px;
+  margin: 0;
+  margin-bottom: 56px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -269,9 +307,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px 200px 140px;
 }
 
 .subscribe-index {
+  padding: 94px 200px;
   color: #FFFFFF;
   background-color: #8AAAB8;
   background-image: url("../images/background-index-subscribe.jpg");
@@ -282,6 +322,8 @@ body {
 
 .subscribe-title {
   width: 720px;
+  margin: 0;
+  margin-bottom: 46px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -291,20 +333,43 @@ body {
 
 .subscribe-text {
   width: 720px;
+  margin: 0;
+  margin-bottom: 46px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
 }
 
+.subscribe-form {
+  display: flex;
+  box-sizing: border-box;
+}
+
 .subscribe-form-email {
-  width: 600px;
+  width: 556px;
+  height: 60px;
+  padding: 0 22px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  background-color: #F2F2F2;
+  border: 0;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.subscribe-index .subscribe-form-email {
+  color: #333333;
+  background-color: #FFFFFF;
 }
 
 .subscribe-form-button {
   width: 200px;
+  padding: 0 20px;
   font-size: 20px;
   line-height: 26px;
   background-color: #83B3D3;
+  border: 0;
+  border-radius: 0px 10px 10px 0px;
 }
 
 /* main-footer */
@@ -314,6 +379,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 1060px;
+  min-height: 120px;
   margin: 0 auto;
 }
 
@@ -361,6 +427,7 @@ body {
 .catalog-title {
   width: 528px;
   margin: 0;
+  margin-bottom: 5px;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -427,15 +494,12 @@ body {
 .sort {
   display: flex;
   width: 1056px;
-}
-
-/* !!!Временное решение, удалю, когда пропишем стили для класса visually-hidden */
-.sort h2 {
-  display: none;
+  margin-bottom: 53px;
 }
 
 .sort-title {
   max-width: 350px;
+  margin: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
@@ -468,6 +532,21 @@ body {
 
 /* residence */
 
+.residence-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  margin-right: -18px;
+  margin-bottom: 34px;
+  padding: 0;
+}
+
+.residence-item:not(:last-child) {
+  width: 340px;
+  margin-right: 18px;
+}
+
 .residence-link {
   text-decoration: none;
 }
@@ -492,6 +571,7 @@ body {
 }
 
 .residence-value {
+  width: 160px;
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
@@ -504,20 +584,20 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-/* !!!Временное решение, удалю, когда пропишем стили для класса visually-hidden */
-.page-control h2 {
-  display: none;
+  margin-bottom: 33px;
 }
 
 .page-control-button {
-  width: 1056px;
+  margin-bottom: 30px;
+  padding: 28px 218px;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .control-button {
   display: block;
   width: 620px;
+  height: 60px;
   margin: 0 auto;
   font-size: 20px;
   line-height: 26px;
