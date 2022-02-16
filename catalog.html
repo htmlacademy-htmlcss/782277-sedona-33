@@ -12,10 +12,10 @@
       <header class="main-header">
         <nav class="navigation">
           <a class="header-logo" href="index.html">
-            <img class="header-logo-img" src="images/sedona-logo.svg" width="139" height="70" alt="Логотип сайта Седона">
+            <img class="header-logo-img image-style" src="images/sedona-logo.svg" width="139" height="70" alt="Логотип сайта Седона">
           </a>
 
-          <ul class="site-navigation reset">
+          <ul class="site-navigation reset-list">
             <li class="site-navigation-item">
               <a class="site-navigation-link" href="index.html">Главная</a>
             </li>
@@ -27,7 +27,7 @@
             </li>
           </ul>
 
-          <ul class="user-navigation reset">
+          <ul class="user-navigation reset-list">
             <li class="user-navigation-item">
               <button class="user-navigation-button user-navigation-button-search" type="button">
                 <span class="visually-hidden">Поиск</span>
@@ -49,7 +49,7 @@
         <header class="header-catalog">
           <h1 class="catalog-title">Гостиницы Седоны</h1>
 
-          <ul class="breadcrumbs reset">
+          <ul class="breadcrumbs reset-list">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
                 <span class="visually-hidden">Главная</span>
@@ -61,9 +61,9 @@
           </ul>
 
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="search-form-group">
+            <fieldset class="search-form-group form-group-infrastructure">
               <legend class="search-form-title">Инфраструктура:</legend>
-              <ul class="search-form-list reset">
+              <ul class="search-form-list reset-list">
                 <li class="search-form-item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="pool" checked>
@@ -85,9 +85,9 @@
               </ul>
             </fieldset>
 
-            <fieldset class="search-form-group">
+            <fieldset class="search-form-group form-group-building">
               <legend class="search-form-title">Тип жилья:</legend>
-              <ul class="search-form-list reset">
+              <ul class="search-form-list reset-list">
                 <li class="search-form-item">
                   <label class="control">
                     <input class="control-input" type="radio" name="residence" value="hotel" checked>
@@ -109,16 +109,16 @@
               </ul>
             </fieldset>
 
-            <fieldset class="search-form-group">
+            <fieldset class="search-form-group form-group-cost">
               <legend class="search-form-title">Стоимость, ₽:</legend>
               <div class="cost">
                 <label class="control cost-control">
                   <input class="cost-input" type="text" name="min-price" value="0">
-                  от
+                  <span class="cost-control-label">от</span>
                 </label>
                 <label class="control cost-control">
                   <input class="cost-input" type="text" name="max-price" value="9000">
-                  до
+                  <span class="cost-control-label">до</span>
                 </label>
                 <div class="cost-scale">
                   <div class="cost-scale-pin pin-min" tabindex="0">
@@ -132,7 +132,7 @@
               </div>
             </fieldset>
 
-            <div class="search-form-group">
+            <div class="search-form-group form-group-control">
               <button class="button search-form-button button-apply" type="submit">Применить</button>
               <button class="button search-form-button button-reset" type="reset">Сбросить</button>
             </div>
@@ -151,7 +151,7 @@
               <option value="popular">Сначала популярные</option>
             </select>
 
-            <ul class="sort-view reset">
+            <ul class="sort-view reset-list">
               <li class="sort-view-item">
                 <a class="sort-view-link sort-view-link-card" href="#">
                   <span class="visually-hidden">Показать карточки</span>
@@ -173,10 +173,10 @@
           <section class="residence">
             <h2 class="visually-hidden">Результаты поиска</h2>
 
-            <ul class="residence-list reset">
+            <ul class="residence-list reset-list">
               <li class="residence-item">
                 <a class="residence-link" href="#">
-                  <img class="residence-img" src="images/hotels/amara-resort-spa.jpg" width="299" height="206" alt="Гостиница Amara Resort & Spa">
+                  <img class="residence-img image-style" src="images/hotels/amara-resort-spa.jpg" width="299" height="206" alt="Гостиница Amara Resort & Spa">
                 </a>
                 <h3 class="residence-title">Amara Resort & Spa</h3>
                 <div class="residence-about">
@@ -185,17 +185,17 @@
                 </div>
                 <div class="residence-control">
                   <a class="button residence-button" href="#">Подробнее</a>
-                  <button class="button residence-button residence-button-add" type="button">В избранное</button>
+                  <button class="button residence-button-add" type="button">В избранное</button>
                 </div>
                 <div class="residence-rating">
-                  <span class="residence-star visually-hidden">4 звезды</span>
+                  <div class="residence-star four-star"><span class="visually-hidden">4 звезды</span></div>
                   <p class="residence-value">Рейтинг: 8,5</p>
                 </div>
               </li>
 
               <li class="residence-item">
                 <a class="residence-link" href="#">
-                  <img class="residence-img" src="images/hotels/desert-quail-inn.jpg" width="299" height="206" alt="Гостиница Desert Quail Inn">
+                  <img class="residence-img image-style" src="images/hotels/desert-quail-inn.jpg" width="299" height="206" alt="Гостиница Desert Quail Inn">
                 </a>
                 <h3 class="residence-title">Desert Quail Inn</h3>
                 <div class="residence-about">
@@ -204,17 +204,17 @@
                 </div>
                 <div class="residence-control">
                   <a class="button residence-button" href="#">Подробнее</a>
-                  <button class="button residence-button residence-button-add" type="button">В избранное</button>
+                  <button class="button residence-button-add" type="button">В избранное</button>
                 </div>
                 <div class="residence-rating">
-                  <span class="residence-star visually-hidden">3 звезды</span>
+                  <div class="residence-star three-star"><span class="visually-hidden">3 звезды</span></div>
                   <p class="residence-value">Рейтинг: 8,9</p>
                 </div>
               </li>
 
               <li class="residence-item">
                 <a class="residence-link" href="#">
-                  <img class="residence-img" src="images/hotels/villas-at-poco-diablo.jpg" width="299" height="206" alt="Гостиница Villas at Poco Diablo">
+                  <img class="residence-img image-style" src="images/hotels/villas-at-poco-diablo.jpg" width="299" height="206" alt="Гостиница Villas at Poco Diablo">
                 </a>
                 <h3 class="residence-title">Villas at Poco Diablo</h3>
                 <div class="residence-about">
@@ -223,17 +223,17 @@
                 </div>
                 <div class="residence-control">
                   <a class="button residence-button" href="#">Подробнее</a>
-                  <button class="button residence-button residence-button-added" type="button">В избранном</button>
+                  <button class="button residence-button-add residence-button-added" type="button">В избранном</button>
                 </div>
                 <div class="residence-rating">
-                  <span class="residence-star visually-hidden">2 звезды</span>
+                  <div class="residence-star two-star"><span class="visually-hidden">2 звезды</span></div>
                   <p class="residence-value">Рейтинг: 9,2</p>
                 </div>
               </li>
 
               <li class="residence-item">
                 <a class="residence-link" href="#">
-                  <img class="residence-img" src="images/hotels/greentree-inn.jpg" width="299" height="206" alt="Гостиница GreenTree Inn">
+                  <img class="residence-img image-style" src="images/hotels/greentree-inn.jpg" width="299" height="206" alt="Гостиница GreenTree Inn">
                 </a>
                 <h3 class="residence-title">GreenTree Inn</h3>
                 <div class="residence-about">
@@ -242,10 +242,10 @@
                 </div>
                 <div class="residence-control">
                   <a class="button residence-button" href="#">Подробнее</a>
-                  <button class="button residence-button residence-button-add" type="button">В избранное</button>
+                  <button class="button residence-button-add" type="button">В избранное</button>
                 </div>
                 <div class="residence-rating">
-                  <span class="residence-star visually-hidden">2 звезды</span>
+                  <div class="residence-star two-star"><span class="visually-hidden">2 звезды</span></div>
                   <p class="residence-value">Рейтинг: 9,2</p>
                 </div>
               </li>
@@ -259,7 +259,7 @@
               <button class="button control-button" type="button">Загрузить ещё</button>
             </div>
 
-            <ul class="page-control-pagination reset">
+            <ul class="page-control-pagination reset-list">
               <li class="pagination-item">
                 <a class="pagination-link pagination-link-curent">1</a>
               </li>
@@ -305,7 +305,7 @@
       </main>
 
       <footer class="main-footer">
-        <ul class="social-list reset">
+        <ul class="social-list reset-list">
           <li class="social-item">
             <a class="social-button social-button-twitter" href="https://twitter.com/htmlacademy_ru">
               <span class="visually-hidden">Twitter</span>
@@ -326,7 +326,7 @@
         <a class="contacts-tel" href="tel:88128121212">+7 (812) 812-12-12</a>
 
         <a class="logo-partner" href="#">
-          <img class="logo-partner-img" src="images/html-academy-logo.svg" width="115" height="34" alt="Логотип HTML Academy">
+          <img class="logo-partner-img image-style" src="images/html-academy-logo.svg" width="115" height="34" alt="Логотип HTML Academy">
         </a>
       </footer>
     </div>
