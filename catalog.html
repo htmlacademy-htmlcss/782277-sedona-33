@@ -66,19 +66,22 @@
               <ul class="search-form-list reset-list">
                 <li class="search-form-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="pool" checked>
+                    <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
+                    <span class="control-input-checkbox"></span>
                     Бассейн
                   </label>
                 </li>
                 <li class="search-form-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="parking" checked>
+                    <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
+                    <span class="control-input-checkbox"></span>
                     Парковка
                   </label>
                 </li>
                 <li class="search-form-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="wifi">
+                    <input class="control-input visually-hidden" type="checkbox" name="wifi">
+                    <span class="control-input-checkbox"></span>
                     Wi-Fi
                   </label>
                 </li>
@@ -90,19 +93,22 @@
               <ul class="search-form-list reset-list">
                 <li class="search-form-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="residence" value="hotel" checked>
+                    <input class="control-input visually-hidden" type="radio" name="residence" value="hotel" checked>
+                    <span class="control-input-radio"></span>
                     Гостиница
                   </label>
                 </li>
                 <li class="search-form-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="residence" value="motel">
+                    <input class="control-input visually-hidden" type="radio" name="residence" value="motel">
+                    <span class="control-input-radio"></span>
                     Мотель
                   </label>
                 </li>
                 <li class="search-form-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="residence" value="apartment">
+                    <input class="control-input visually-hidden" type="radio" name="residence" value="apartment">
+                    <span class="control-input-radio"></span>
                     Апартаменты
                   </label>
                 </li>
@@ -112,14 +118,16 @@
             <fieldset class="search-form-group form-group-cost">
               <legend class="search-form-title">Стоимость, ₽:</legend>
               <div class="cost">
-                <label class="control cost-control">
-                  <input class="cost-input" type="text" name="min-price" value="0">
-                  <span class="cost-control-label">от</span>
-                </label>
-                <label class="control cost-control">
-                  <input class="cost-input" type="text" name="max-price" value="9000">
-                  <span class="cost-control-label">до</span>
-                </label>
+                <div class="cost-control">
+                  <label class="cost-item">
+                    <input class="cost-input" type="text" name="min-price" value="0">
+                    <span class="cost-label">от</span>
+                  </label>
+                  <label class="cost-item">
+                    <input class="cost-input" type="text" name="max-price" value="9000">
+                    <span class="cost-label">до</span>
+                  </label>
+                </div>
                 <div class="cost-scale">
                   <div class="cost-scale-pin pin-min" tabindex="0">
                     <span class="visually-hidden">Изменение минимальной цены жилья</span>
@@ -133,8 +141,8 @@
             </fieldset>
 
             <div class="search-form-group form-group-control">
-              <button class="button search-form-button button-apply" type="submit">Применить</button>
-              <button class="button search-form-button button-reset" type="reset">Сбросить</button>
+              <button class="button button-apply" type="submit">Применить</button>
+              <button class="button button-reset" type="reset">Сбросить</button>
             </div>
           </form>
         </header>
@@ -153,7 +161,7 @@
 
             <ul class="sort-view reset-list">
               <li class="sort-view-item">
-                <a class="sort-view-link sort-view-link-card" href="#">
+                <a class="sort-view-link sort-view-link-card sort-view-link-card-active" href="#">
                   <span class="visually-hidden">Показать карточки</span>
                 </a>
               </li>
