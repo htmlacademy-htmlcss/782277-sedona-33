@@ -137,9 +137,14 @@ body {
   margin-left: auto;
 }
 
+.user-navigation-item {
+  margin-bottom: 6px;
+}
+
 .user-navigation-button {
   width: 42px;
-  height: 60px;
+  height: 42px;
+  padding: 0;
   color: #000000;
   background-color: #FFFFFF;
   background-repeat: no-repeat;
@@ -161,7 +166,7 @@ body {
 
 .user-navigation-button-favorite::after {
   position: absolute;
-  top: 15px;
+  top: 4px;
   left: 24px;
   content: "12";
   width: 20px;
@@ -178,6 +183,7 @@ body {
 .user-navigation-link {
   display: block;
   width: 160px;
+  min-height: 37px;
   margin-left: 20px;
   padding: 8px 15px;
   line-height: 20px;
@@ -436,7 +442,7 @@ body {
 .subscribe-text {
   width: 720px;
   margin: 0;
-  margin-bottom: 46px;
+  margin-bottom: 45px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -488,16 +494,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 150px;
+  margin-left: -10px;
 }
 
 .social-item:not(:last-child) {
-  margin-right: 22px;
+  margin-right: 4px;
 }
 
 .social-button {
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   color: #333333;
