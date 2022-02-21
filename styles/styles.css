@@ -14,6 +14,8 @@
   font-display: swap;
 }
 
+/* общие стили проекта */
+
 *,
 *::before,
 *::after {
@@ -89,9 +91,13 @@ body {
   flex-grow: 1;
 }
 
-/* index page */
+/* index page - стили главной страницы */
 
-/* main-header */
+/* main-header - общий блок для всех страниц */
+
+.main-header {
+  z-index: 1;
+}
 
 .navigation {
   display: flex;
@@ -194,7 +200,7 @@ body {
   border-radius: 4px;
 }
 
-/* header-index */
+/* header - главной страницы */
 
 .header-index {
   margin-bottom: 31px;
@@ -233,7 +239,7 @@ body {
   color: #000000;
 }
 
-/* advantages */
+/* advantages - блок с преимуществами */
 
 .advantages {
   margin-bottom: 91px;
@@ -277,7 +283,7 @@ body {
   text-align: center;
 }
 
-/* advantages-item-large */
+/* advantages-item-large - стили для большого блока преимуществ */
 
 .advantages-item-large {
   display: flex;
@@ -305,7 +311,7 @@ body {
   width: 800px;
 }
 
-/* advantages-item-small */
+/* advantages-item-small - стили для маленького блока преимуществ */
 
 .advantages-item-small {
   width: 400px;
@@ -322,7 +328,7 @@ body {
   color: #000000;
 }
 
-/* advantages-sublist */
+/* advantages-sublist - стили для второстепенного списка преимуществ */
 
 .advantages-sublist {
   display: flex;
@@ -370,7 +376,7 @@ body {
   background-size: 64px 76px;
 }
 
-/* search */
+/* search - блок поиска */
 
 .search {
   display: flex;
@@ -409,7 +415,7 @@ body {
   border-radius: 10px;
 }
 
-/* subscribe */
+/* subscribe - блок подписки */
 
 .subscribe {
   display: flex;
@@ -483,7 +489,7 @@ body {
   border-radius: 0px 10px 10px 0px;
 }
 
-/* main-footer */
+/* main-footer - общий блок для всех страниц */
 
 .main-footer {
   display: flex;
@@ -546,9 +552,9 @@ body {
 }
 
 
-/* catalog page */
+/* catalog page - стили для страницы каталога */
 
-/* header-catalog */
+/* header - страницы каталога */
 
 .header-catalog {
   padding: 35px 72px 84px;
@@ -569,7 +575,7 @@ body {
   line-height: 78px;
 }
 
-/* breadcrumbs */
+/* breadcrumbs - стили для хлебных крошек */
 
 .breadcrumbs {
   display: flex;
@@ -599,7 +605,7 @@ body {
   background-size: 12px 12px;
 }
 
-/* search-form */
+/* search-form - стили формы поиска */
 
 .search-form {
   display: flex;
@@ -694,7 +700,7 @@ body {
 }
 
 
-/* cost */
+/* cost - стилизация range с двумя пинами */
 
 .form-group-cost .search-form-title {
   margin-bottom: 34px;
@@ -774,6 +780,8 @@ body {
   left: 216px;
 }
 
+/* кнопки формы поиска */
+
 .button-apply {
   width: 160px;
   min-height: 48px;
@@ -795,7 +803,7 @@ body {
   border: 0;
 }
 
-/* catalog-main */
+/* catalog-main - стили для основного содержания каталога */
 
 .catalog-container {
   display: flex;
@@ -805,7 +813,7 @@ body {
   margin-bottom: 33px;
 }
 
-/* sort */
+/* sort - сортировка результатов поиска */
 
 .sort {
   display: flex;
@@ -879,7 +887,7 @@ body {
   border-color: #000000;
 }
 
-/* residence */
+/* residence - стили для отобранного жилья */
 
 .residence-list {
   display: grid;
@@ -999,7 +1007,7 @@ body {
   border-radius: 4px;
 }
 
-/* page-control */
+/* page-control - стили для элементов вывода результатов поиска */
 
 .page-control {
   display: flex;
