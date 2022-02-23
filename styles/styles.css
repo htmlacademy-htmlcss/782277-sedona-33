@@ -64,6 +64,7 @@ body {
 }
 
 .button {
+  padding: 0;
   font-family: inherit;
   font-size: 16px;
   line-height: 21px;
@@ -74,6 +75,8 @@ body {
   text-decoration: none;
   color: #FFFFFF;
   background-color: #756257;
+  border: 0;
+  cursor: pointer;
 }
 
 .page-container {
@@ -120,8 +123,7 @@ body {
 .site-navigation-link {
   position: relative;
   display: block;
-  margin: 0 17px;
-  padding: 20px 0;
+  padding: 20px 17px;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -130,13 +132,22 @@ body {
   color: #000000;
 }
 
+.site-navigation-link:hover:not(.navigation-link-active) {
+  color: #756257;
+}
+
+.site-navigation-link:active:not(.navigation-link-active) {
+  color: rgba(117, 98, 87, 0.3);
+}
+
 .navigation-link-active::after {
   position: absolute;
-  top: 64px;
-  left: 0;
+  right: 17px;
+  bottom: 0;
+  left: 17px;
   content: "";
-  width: 100%;
-  border-bottom: 2px solid #756257;
+  height: 2px;
+  background-color: #756257;
 }
 
 .user-navigation {
@@ -147,36 +158,33 @@ body {
   margin-left: auto;
 }
 
-.user-navigation-item {
-  margin-bottom: 6px;
-}
-
 .user-navigation-button {
+  position: relative;
   width: 42px;
   height: 42px;
   padding: 0;
   color: #000000;
   background-color: #FFFFFF;
-  background-repeat: no-repeat;
-  background-position: center;
   border: 0;
   cursor: pointer;
 }
 
-.user-navigation-button-search {
-  background-image: url("../images/icons/search.svg");
-  background-size: 18px 18px;
+.user-navigation-button:hover .user-navigation-icon {
+  fill: #756257;
 }
 
-.user-navigation-button-favorite {
-  position: relative;
-  background-image: url("../images/icons/favorite.svg");
-  background-size: 18px 17px;
+.user-navigation-button:active .user-navigation-icon {
+  fill: #756257;
+  opacity: 0.3;
 }
 
-.user-navigation-button-favorite::after {
+.button-favorite:active::after {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-favorite::after {
   position: absolute;
-  top: 4px;
+  top: 0;
   left: 24px;
   content: "12";
   width: 20px;
@@ -193,11 +201,27 @@ body {
 .user-navigation-link {
   display: block;
   width: 160px;
-  min-height: 37px;
   margin-left: 20px;
-  padding: 8px 15px;
+  margin-bottom: 6px;
+  padding: 9px 15px 8px 15px;
   line-height: 20px;
   border-radius: 4px;
+}
+
+.user-navigation-link:hover {
+  background-color: #615048;
+}
+
+.user-navigation-link:focus {
+  background-color: #615048;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.user-navigation-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #615048;
+  box-shadow: none;
 }
 
 /* header - главной страницы */
@@ -411,8 +435,23 @@ body {
   height: 60px;
   font-size: 20px;
   line-height: 36px;
-  border: 0;
   border-radius: 10px;
+}
+
+.search-button:hover {
+  background-color: #615048;
+}
+
+.search-button:focus {
+  background-color: #615048;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #615048;
+  box-shadow: none;
 }
 
 /* subscribe - блок подписки */
@@ -474,9 +513,21 @@ body {
   border-radius: 10px 0px 0px 10px;
 }
 
-.subscribe-index .subscribe-form-email {
-  color: #333333;
+.subscribe-form-email:hover {
+  background-color: #E6E6E6;
+}
+
+.subscribe-form-email:focus {
+  background-color: #E6E6E6;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+/* использовать класс для невалидного значения  в форме */
+
+.subscribe-form-error {
   background-color: #FFFFFF;
+  box-shadow: inset 0 0 0 3px #FF5757;
 }
 
 .subscribe-form-button {
@@ -485,8 +536,23 @@ body {
   font-size: 20px;
   line-height: 26px;
   background-color: #83B3D3;
-  border: 0;
   border-radius: 0px 10px 10px 0px;
+}
+
+.subscribe-form-button:hover {
+  background-color: #68A2CA;
+}
+
+.subscribe-form-button:focus {
+  background-color: #68A2CA;
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
+}
+
+.subscribe-form-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
+  box-shadow: none;
 }
 
 /* main-footer - общий блок для всех страниц */
@@ -495,7 +561,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1060px;
+  width: 1078px;
   min-height: 120px;
   margin: 0 auto;
 }
@@ -504,41 +570,57 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 150px;
-  margin-left: -10px;
+  margin-right: 8px;
 }
 
-.social-item:not(:last-child) {
+.social-item {
   margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+.social-item:last-child {
+  margin-right: 0;
 }
 
 .social-button {
+  position: relative;
   display: block;
   width: 40px;
   height: 40px;
   text-align: center;
   text-decoration: none;
   color: #333333;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.social-button-twitter {
-  background-image: url("../images/icons/twitter.svg");
-  background-size: 18px 15px;
+.social-button:hover .social-icon,
+.social-button:focus .social-icon,
+.social-button:active .social-icon {
+  fill: #68A2CA;
 }
 
-.social-button-facebook {
-  background-image: url("../images/icons/facebook.svg");
-  background-size: 10px 18px;
+.social-button:focus {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  outline: none;
 }
 
-.social-button-youtube {
-  background-image: url("../images/icons/youtube.svg");
-  background-size: 20px 16px;
+.social-button:active {
+  box-shadow: none;
+  opacity: 0.3;
+}
+
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .contacts-tel {
-  width: 720px;
+  max-width: 720px;
+  padding: 15px;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -547,8 +629,43 @@ body {
   color: #000000;
 }
 
+.contacts-tel:hover {
+  color: #756257;
+}
+
+.contacts-tel:focus {
+  color: #756257;
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 10px;
+  outline: none;
+}
+
+.contacts-tel:active {
+  color: #756257;
+  box-shadow: none;
+  opacity: 0.3;
+}
+
 .logo-partner {
-  width: 115px;
+  width: 135px;
+  padding: 15px 10px 10px;
+}
+
+.logo-partner:hover .logo-partner-img,
+.logo-partner:focus .logo-partner-img,
+.logo-partner:active .logo-partner-img {
+  fill: #756257;
+}
+
+.logo-partner:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 10px;
+  outline: none;
+}
+
+.logo-partner:active {
+  box-shadow: none;
+  opacity: 0.3;
 }
 
 
@@ -788,7 +905,6 @@ body {
   margin-bottom: 20px;
   padding: 10px;
   background-color: #83B3D3;
-  border: 0;
   border-radius: 4px;
 }
 
@@ -800,7 +916,6 @@ body {
   line-height: 23px;
   text-transform: none;
   background-color: transparent;
-  border: 0;
 }
 
 /* catalog-main - стили для основного содержания каталога */
@@ -958,7 +1073,6 @@ body {
   padding-top: 8px;
   padding-bottom: 10px;
   background-color: #83B3D3;
-  border: 0;
   border-radius: 4px;
 }
 
@@ -1030,7 +1144,6 @@ body {
   font-size: 20px;
   line-height: 26px;
   background-color: #83B3D3;
-  border: 0;
   border-radius: 4px;
 }
 
