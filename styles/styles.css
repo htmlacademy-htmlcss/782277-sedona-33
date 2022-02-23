@@ -14,6 +14,8 @@
   font-display: swap;
 }
 
+/* общие стили проекта */
+
 *,
 *::before,
 *::after {
@@ -25,13 +27,13 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  font-style: normal;
+  font-weight: 400;
   color: #333333;
   background-color: #F2F2F2;
 }
@@ -62,19 +64,26 @@ body {
 }
 
 .button {
+  padding: 0;
   font-family: inherit;
   font-size: 16px;
   line-height: 21px;
+  font-style: normal;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: #FFFFFF;
   background-color: #756257;
+  border: 0;
+  cursor: pointer;
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
   width: 1200px;
+  min-height: 100%;
   margin: 0 auto;
   color: #333333;
   background-color: #FFFFFF;
@@ -85,9 +94,13 @@ body {
   flex-grow: 1;
 }
 
-/* index page */
+/* index page - стили главной страницы */
 
-/* main-header */
+/* main-header - общий блок для всех страниц */
+
+.main-header {
+  z-index: 1;
+}
 
 .navigation {
   display: flex;
@@ -108,9 +121,9 @@ body {
 }
 
 .site-navigation-link {
+  position: relative;
   display: block;
-  margin: 0 17px;
-  padding: 20px 0;
+  padding: 20px 17px;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -119,8 +132,22 @@ body {
   color: #000000;
 }
 
-.navigation-link-active {
-  border-bottom: 2px solid #756257;
+.site-navigation-link:hover:not(.navigation-link-active) {
+  color: #756257;
+}
+
+.site-navigation-link:active:not(.navigation-link-active) {
+  color: rgba(117, 98, 87, 0.3);
+}
+
+.navigation-link-active::after {
+  position: absolute;
+  right: 17px;
+  bottom: 0;
+  left: 17px;
+  content: "";
+  height: 2px;
+  background-color: #756257;
 }
 
 .user-navigation {
@@ -132,36 +159,72 @@ body {
 }
 
 .user-navigation-button {
+  position: relative;
   width: 42px;
-  height: 60px;
+  height: 42px;
+  padding: 0;
   color: #000000;
   background-color: #FFFFFF;
-  background-repeat: no-repeat;
-  background-position: center;
   border: 0;
   cursor: pointer;
 }
 
-.user-navigation-button-search {
-  background-image: url("../images/icons/search.svg");
-  background-size: 18px 18px;
+.user-navigation-button:hover .user-navigation-icon {
+  fill: #756257;
 }
 
-.user-navigation-button-favorite {
-  background-image: url("../images/icons/favorite.svg");
-  background-size: 18px 17px;
+.user-navigation-button:active .user-navigation-icon {
+  fill: #756257;
+  opacity: 0.3;
+}
+
+.button-favorite:active::after {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-favorite::after {
+  position: absolute;
+  top: 0;
+  left: 24px;
+  content: "12";
+  width: 20px;
+  height: 20px;
+  padding-top: 4px;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  border-radius: 50%;
 }
 
 .user-navigation-link {
   display: block;
   width: 160px;
   margin-left: 20px;
-  padding: 8px 15px;
+  margin-bottom: 6px;
+  padding: 9px 15px 8px 15px;
   line-height: 20px;
   border-radius: 4px;
 }
 
-/* header-index */
+.user-navigation-link:hover {
+  background-color: #615048;
+}
+
+.user-navigation-link:focus {
+  background-color: #615048;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.user-navigation-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #615048;
+  box-shadow: none;
+}
+
+/* header - главной страницы */
 
 .header-index {
   margin-bottom: 31px;
@@ -200,7 +263,7 @@ body {
   color: #000000;
 }
 
-/* advantages */
+/* advantages - блок с преимуществами */
 
 .advantages {
   margin-bottom: 91px;
@@ -244,7 +307,7 @@ body {
   text-align: center;
 }
 
-/* advantages-item-large */
+/* advantages-item-large - стили для большого блока преимуществ */
 
 .advantages-item-large {
   display: flex;
@@ -272,7 +335,7 @@ body {
   width: 800px;
 }
 
-/* advantages-item-small */
+/* advantages-item-small - стили для маленького блока преимуществ */
 
 .advantages-item-small {
   width: 400px;
@@ -289,7 +352,7 @@ body {
   color: #000000;
 }
 
-/* advantages-sublist */
+/* advantages-sublist - стили для второстепенного списка преимуществ */
 
 .advantages-sublist {
   display: flex;
@@ -316,7 +379,28 @@ body {
   margin-bottom: 20px;
 }
 
-/* search */
+.advantages-subitem-residence {
+  background-image: url("../images/icons/house.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 29%;
+  background-size: 75px 72px;
+}
+
+.advantages-subitem-food {
+  background-image: url("../images/icons/food.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 29%;
+  background-size: 74px 70px;
+}
+
+.advantages-subitem-souvenirs {
+  background-image: url("../images/icons/gift.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 28%;
+  background-size: 64px 76px;
+}
+
+/* search - блок поиска */
 
 .search {
   display: flex;
@@ -351,11 +435,26 @@ body {
   height: 60px;
   font-size: 20px;
   line-height: 36px;
-  border: 0;
   border-radius: 10px;
 }
 
-/* subscribe */
+.search-button:hover {
+  background-color: #615048;
+}
+
+.search-button:focus {
+  background-color: #615048;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #615048;
+  box-shadow: none;
+}
+
+/* subscribe - блок подписки */
 
 .subscribe {
   display: flex;
@@ -392,7 +491,7 @@ body {
 .subscribe-text {
   width: 720px;
   margin: 0;
-  margin-bottom: 46px;
+  margin-bottom: 45px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -404,7 +503,7 @@ body {
 
 .subscribe-form-email {
   width: 600px;
-  height: 60px;
+  min-height: 60px;
   padding: 10px 22px;
   font-size: 18px;
   line-height: 26px;
@@ -414,9 +513,21 @@ body {
   border-radius: 10px 0px 0px 10px;
 }
 
-.subscribe-index .subscribe-form-email {
-  color: #333333;
+.subscribe-form-email:hover {
+  background-color: #E6E6E6;
+}
+
+.subscribe-form-email:focus {
+  background-color: #E6E6E6;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+/* использовать класс для невалидного значения  в форме */
+
+.subscribe-form-error {
   background-color: #FFFFFF;
+  box-shadow: inset 0 0 0 3px #FF5757;
 }
 
 .subscribe-form-button {
@@ -425,17 +536,32 @@ body {
   font-size: 20px;
   line-height: 26px;
   background-color: #83B3D3;
-  border: 0;
   border-radius: 0px 10px 10px 0px;
 }
 
-/* main-footer */
+.subscribe-form-button:hover {
+  background-color: #68A2CA;
+}
+
+.subscribe-form-button:focus {
+  background-color: #68A2CA;
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
+}
+
+.subscribe-form-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
+  box-shadow: none;
+}
+
+/* main-footer - общий блок для всех страниц */
 
 .main-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1060px;
+  width: 1078px;
   min-height: 120px;
   margin: 0 auto;
 }
@@ -444,40 +570,57 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 150px;
+  margin-right: 8px;
 }
 
-.social-item:not(:last-child) {
-  margin-right: 30px;
+.social-item {
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+.social-item:last-child {
+  margin-right: 0;
 }
 
 .social-button {
+  position: relative;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   color: #333333;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.social-button-twitter {
-  background-image: url("../images/icons/twitter.svg");
-  background-size: 18px 15px;
+.social-button:hover .social-icon,
+.social-button:focus .social-icon,
+.social-button:active .social-icon {
+  fill: #68A2CA;
 }
 
-.social-button-facebook {
-  background-image: url("../images/icons/facebook.svg");
-  background-size: 10px 18px;
+.social-button:focus {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  outline: none;
 }
 
-.social-button-youtube {
-  background-image: url("../images/icons/youtube.svg");
-  background-size: 20px 16px;
+.social-button:active {
+  box-shadow: none;
+  opacity: 0.3;
+}
+
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .contacts-tel {
-  width: 720px;
+  max-width: 720px;
+  padding: 15px;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -486,14 +629,49 @@ body {
   color: #000000;
 }
 
+.contacts-tel:hover {
+  color: #756257;
+}
+
+.contacts-tel:focus {
+  color: #756257;
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 10px;
+  outline: none;
+}
+
+.contacts-tel:active {
+  color: #756257;
+  box-shadow: none;
+  opacity: 0.3;
+}
+
 .logo-partner {
-  width: 115px;
+  width: 135px;
+  padding: 15px 10px 10px;
+}
+
+.logo-partner:hover .logo-partner-img,
+.logo-partner:focus .logo-partner-img,
+.logo-partner:active .logo-partner-img {
+  fill: #756257;
+}
+
+.logo-partner:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 10px;
+  outline: none;
+}
+
+.logo-partner:active {
+  box-shadow: none;
+  opacity: 0.3;
 }
 
 
-/* catalog page */
+/* catalog page - стили для страницы каталога */
 
-/* header-catalog */
+/* header - страницы каталога */
 
 .header-catalog {
   padding: 35px 72px 84px;
@@ -514,7 +692,7 @@ body {
   line-height: 78px;
 }
 
-/* breadcrumbs */
+/* breadcrumbs - стили для хлебных крошек */
 
 .breadcrumbs {
   display: flex;
@@ -544,7 +722,7 @@ body {
   background-size: 12px 12px;
 }
 
-/* search-form */
+/* search-form - стили формы поиска */
 
 .search-form {
   display: flex;
@@ -554,14 +732,14 @@ body {
 .search-form-group {
   display: flex;
   flex-direction: column;
-  width: 160px;
+  width: 162px;
   margin: 0;
   padding: 0;
   border: 0;
 }
 
 .form-group-infrastructure {
-  margin-right: 57px;
+  margin-right: 55px;
 }
 
 .form-group-building {
@@ -569,12 +747,13 @@ body {
 }
 
 .form-group-cost {
-  width: 287px;
+  width: 288px;
   margin-right: 81px;
 }
 
 .form-group-control {
   justify-content: flex-end;
+  width: 164px;
 }
 
 .search-form-title {
@@ -594,47 +773,93 @@ body {
 }
 
 .control {
+  padding-left: 40px;
   line-height: 23px;
 }
 
-/* cost */
+.control-input {
+  position: absolute;
+}
 
-.cost {
-  display: flex;
-  flex-wrap: wrap;
+.control-input-checkbox,
+.control-input-radio {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  margin-left: -40px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: none;
+}
+
+.control-input:checked+.control-input-checkbox {
+  background-image: url("../images/icons/checkbox.svg");
+}
+
+.control-input:focus+.control-input-checkbox {
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.control-input-radio {
+  border-radius: 50%;
+}
+
+.control-input:checked+.control-input-radio {
+  background-image: url("../images/icons/radio.svg");
+}
+
+.control-input:focus+.control-input-radio {
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
+
+/* cost - стилизация range с двумя пинами */
+
+.form-group-cost .search-form-title {
+  margin-bottom: 34px;
 }
 
 .cost-control {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.cost-item {
   position: relative;
-  margin-bottom: 22px;
 }
 
-.cost-control:first-of-type .cost-input {
-  border-right: 0;
-  border-radius: 4px 0 0 4px;
-}
-
-.cost-control:last-of-type .cost-input {
-  border-radius: 0 4px 4px 0;
-}
-
-.cost-control-label {
+.cost-label {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 14px;
+  right: 14px;
   color: rgba(255, 255, 255, 0.3);
 }
 
 .cost-input {
   width: 143px;
   min-height: 48px;
-  padding-left: 19px;
+  padding: 4px 18px;
   font-family: inherit;
   font-size: 18px;
   line-height: 23px;
+  font-style: normal;
+  font-weight: 400;
   color: #FFFFFF;
   background-color: transparent;
   border: 2px solid #FFFFFF;
+}
+
+.cost-item:first-child .cost-input {
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.cost-item:last-child .cost-input {
+  border-radius: 0 4px 4px 0;
 }
 
 .cost-scale {
@@ -647,7 +872,7 @@ body {
 }
 
 .cost-scale-level {
-  width: 70%;
+  width: 80%;
   height: 2px;
   background-color: #FFFFFF;
 }
@@ -669,15 +894,17 @@ body {
 }
 
 .pin-max {
-  left: 190px;
+  left: 216px;
 }
+
+/* кнопки формы поиска */
 
 .button-apply {
   width: 160px;
+  min-height: 48px;
   margin-bottom: 20px;
   padding: 10px;
   background-color: #83B3D3;
-  border: 0;
   border-radius: 4px;
 }
 
@@ -689,10 +916,9 @@ body {
   line-height: 23px;
   text-transform: none;
   background-color: transparent;
-  border: 0;
 }
 
-/* catalog-main */
+/* catalog-main - стили для основного содержания каталога */
 
 .catalog-container {
   display: flex;
@@ -702,7 +928,7 @@ body {
   margin-bottom: 33px;
 }
 
-/* sort */
+/* sort - сортировка результатов поиска */
 
 .sort {
   display: flex;
@@ -729,6 +955,8 @@ body {
   font-family: inherit;
   font-size: 18px;
   line-height: 23px;
+  font-style: normal;
+  font-weight: 400;
   color: #333333;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
@@ -770,14 +998,18 @@ body {
   background-image: url("../images/icons/mode-list.svg");
 }
 
-/* residence */
+.sort-view-link-card {
+  border-color: #000000;
+}
+
+/* residence - стили для отобранного жилья */
 
 .residence-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, 340px);
   column-gap: 18px;
-  row-gap: 8px;
-  margin-bottom: 28px;
+  row-gap: 6px;
+  margin-bottom: 30px;
 }
 
 .residence-item {
@@ -832,7 +1064,7 @@ body {
   display: block;
   width: 133px;
   padding-top: 8px;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   border-radius: 4px;
 }
 
@@ -841,7 +1073,6 @@ body {
   padding-top: 8px;
   padding-bottom: 10px;
   background-color: #83B3D3;
-  border: 0;
   border-radius: 4px;
 }
 
@@ -871,7 +1102,7 @@ body {
 }
 
 .four-star {
-  width: 91px;
+  width: 89px;
 }
 
 .five-star {
@@ -890,7 +1121,7 @@ body {
   border-radius: 4px;
 }
 
-/* page-control */
+/* page-control - стили для элементов вывода результатов поиска */
 
 .page-control {
   display: flex;
@@ -913,7 +1144,6 @@ body {
   font-size: 20px;
   line-height: 26px;
   background-color: #83B3D3;
-  border: 0;
   border-radius: 4px;
 }
 
@@ -969,6 +1199,8 @@ body {
   font-family: inherit;
   font-size: 18px;
   line-height: 23px;
+  font-style: normal;
+  font-weight: 400;
   color: #333333;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
