@@ -62,7 +62,7 @@
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Гостиницы</a>
+              <a class="breadcrumbs-link breadcrumbs-link-active">Гостиницы</a>
             </li>
           </ul>
 
@@ -159,15 +159,17 @@
 
             <p class="sort-title">Найдено гостиниц: <span class="sort-count">38</span></p>
 
-            <select class="sort-list" aria-label="Сортировка">
-              <option value="cheap">Сначала дешёвые</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="popular">Сначала популярные</option>
-            </select>
+            <div class="sort-list-wrappen">
+              <select class="sort-list" aria-label="Сортировка">
+                <option value="cheap">Сначала дешёвые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+              </select>
+            </div>
 
             <ul class="sort-view reset-list">
               <li class="sort-view-item">
-                <a class="sort-view-link sort-view-link-card sort-view-link-card-active">
+                <a class="sort-view-link sort-view-link-card sort-view-link-active">
                   <span class="visually-hidden">Показать карточки</span>
                 </a>
               </li>
@@ -190,9 +192,11 @@
             <ul class="residence-list reset-list">
               <li class="residence-item">
                 <a class="residence-link" href="#">
-                  <img class="residence-img image-style" src="images/hotels/amara-resort-spa.jpg" width="299" height="206" alt="Гостиница Amara Resort & Spa.">
+                  <img class="residence-img image-style" src="images/hotels/amara-resort-spa.jpg" width="300" height="206" alt="Гостиница Amara Resort & Spa.">
                 </a>
-                <h3 class="residence-title">Amara Resort & Spa</h3>
+                <a class="residence-link" href="#">
+                  <h3 class="residence-title">Amara Resort & Spa</h3>
+                </a>
                 <div class="residence-about">
                   <p class="residence-type">Гостиница</p>
                   <p class="residence-cost">От 4000 ₽</p>
@@ -209,9 +213,11 @@
 
               <li class="residence-item">
                 <a class="residence-link" href="#">
-                  <img class="residence-img image-style" src="images/hotels/desert-quail-inn.jpg" width="299" height="206" alt="Гостиница Desert Quail Inn.">
+                  <img class="residence-img image-style" src="images/hotels/desert-quail-inn.jpg" width="300" height="206" alt="Гостиница Desert Quail Inn.">
                 </a>
-                <h3 class="residence-title">Desert Quail Inn</h3>
+                <a class="residence-link" href="#">
+                  <h3 class="residence-title">Desert Quail Inn</h3>
+                </a>
                 <div class="residence-about">
                   <p class="residence-type">Гостиница</p>
                   <p class="residence-cost">От 3000 ₽</p>
@@ -228,9 +234,11 @@
 
               <li class="residence-item">
                 <a class="residence-link" href="#">
-                  <img class="residence-img image-style" src="images/hotels/villas-at-poco-diablo.jpg" width="299" height="206" alt="Гостиница Villas at Poco Diablo.">
+                  <img class="residence-img image-style" src="images/hotels/villas-at-poco-diablo.jpg" width="300" height="206" alt="Гостиница Villas at Poco Diablo.">
                 </a>
-                <h3 class="residence-title">Villas at Poco Diablo</h3>
+                <a class="residence-link" href="#">
+                  <h3 class="residence-title">Villas at Poco Diablo</h3>
+                </a>
                 <div class="residence-about">
                   <p class="residence-type">Гостиница</p>
                   <p class="residence-cost">От 2000 ₽</p>
@@ -247,9 +255,11 @@
 
               <li class="residence-item">
                 <a class="residence-link" href="#">
-                  <img class="residence-img image-style" src="images/hotels/greentree-inn.jpg" width="299" height="206" alt="Гостиница GreenTree Inn.">
+                  <img class="residence-img image-style" src="images/hotels/greentree-inn.jpg" width="300" height="206" alt="Гостиница GreenTree Inn.">
                 </a>
-                <h3 class="residence-title">GreenTree Inn</h3>
+                <a class="residence-link" href="#">
+                  <h3 class="residence-title">GreenTree Inn</h3>
+                </a>
                 <div class="residence-about">
                   <p class="residence-type">Гостиница</p>
                   <p class="residence-cost">От 3000 ₽</p>
@@ -287,7 +297,7 @@
                 <a class="pagination-link" href="#">4</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-link">&hellip;</a>
+                <a class="pagination-link" href="#">&hellip;</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">10</a>
@@ -296,11 +306,13 @@
 
             <div class="page-control-view">
               <p class="page-view-title">Гостиниц на странице:</p>
-              <select class="page-view-list" aria-label="Гостиниц на странице">
-                <option value="4">4</option>
-                <option value="8">8</option>
-                <option value="all-items">Показать всё</option>
-              </select>
+              <div class="page-view-wrappen">
+                <select class="page-view-list" aria-label="Гостиниц на странице">
+                  <option value="4">4</option>
+                  <option value="8">8</option>
+                  <option value="all-items">Показать всё</option>
+                </select>
+              </div>
             </div>
           </section>
         </div>
