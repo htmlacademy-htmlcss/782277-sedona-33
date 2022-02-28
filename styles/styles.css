@@ -30,9 +30,9 @@ body {
   height: 100%;
   margin: 0;
   font-family: "PT Sans", sans-serif;
+  font-style: normal;
   font-size: 18px;
   line-height: 21px;
-  font-style: normal;
   font-weight: 400;
   color: #333333;
   background-color: #F2F2F2;
@@ -66,9 +66,9 @@ body {
 .button {
   padding: 0;
   font-family: inherit;
+  font-style: normal;
   font-size: 16px;
   line-height: 21px;
-  font-style: normal;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -124,9 +124,9 @@ body {
   position: relative;
   display: block;
   padding: 20px 17px;
-  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
   color: #000000;
@@ -255,9 +255,9 @@ body {
 .header-index-slogan {
   width: 720px;
   margin: 0 auto;
-  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
@@ -287,9 +287,9 @@ body {
   width: 172px;
   margin: 0 auto;
   margin-bottom: 29px;
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
 }
@@ -413,9 +413,9 @@ body {
   width: 720px;
   margin: 0;
   margin-bottom: 29px;
-  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
@@ -432,7 +432,7 @@ body {
 
 .search-button {
   width: 575px;
-  height: 60px;
+  min-height: 60px;
   font-size: 20px;
   line-height: 36px;
   border-radius: 10px;
@@ -477,9 +477,9 @@ body {
   width: 720px;
   margin: 0;
   margin-bottom: 46px;
-  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
 }
@@ -695,9 +695,9 @@ body {
 .catalog-title {
   width: 528px;
   margin: 0;
-  font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  font-weight: 700;
 }
 
 /* breadcrumbs - стили для хлебных крошек */
@@ -811,9 +811,9 @@ body {
 .search-form-title {
   margin-bottom: 30px;
   padding: 0;
-  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  font-weight: 700;
 }
 
 .search-form-item {
@@ -844,21 +844,21 @@ body {
   background-position: center;
 }
 
-.control-input:checked+.control-input-checkbox {
+.control-input:checked + .control-input-checkbox {
   background-image: url("../images/icons/checkbox.svg");
 }
 
-.control-input:hover+.control-input-checkbox {
+.control-input:hover + .control-input-checkbox {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-input:focus+.control-input-checkbox {
+.control-input:focus + .control-input-checkbox {
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 0 0 3px #83B3D3;
 }
 
-.control-input:active+.control-input-checkbox,
-.control-input:disabled+.control-input-checkbox {
+.control-input:active + .control-input-checkbox,
+.control-input:disabled + .control-input-checkbox {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -866,24 +866,24 @@ body {
   border-radius: 50%;
 }
 
-.control-input:checked+.control-input-radio {
+.control-input:checked + .control-input-radio {
   background-image: url("../images/icons/radio.svg");
 }
 
-.control-input:hover+.control-input-radio {
+.control-input:hover + .control-input-radio {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-input:checked:focus+.control-input-radio {
+.control-input:checked:focus + .control-input-radio {
   box-shadow: 0 0 0 3px #83B3D3;
 }
 
-.control-input:focus+.control-input-radio {
+.control-input:focus + .control-input-radio {
   box-shadow: inset 0 0 0 3px #83B3D3;
 }
 
-.control-input:active+.control-input-radio,
-.control-input:disabled+.control-input-radio {
+.control-input:active + .control-input-radio,
+.control-input:disabled + .control-input-radio {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -913,10 +913,11 @@ body {
   width: 144px;
   min-height: 48px;
   padding: 4px 18px;
+  padding-right: 36px;
   font-family: inherit;
+  font-style: normal;
   font-size: 18px;
   line-height: 23px;
-  font-style: normal;
   font-weight: 400;
   color: #FFFFFF;
   background-color: transparent;
@@ -1045,9 +1046,9 @@ body {
   width: 94px;
   min-height: 26px;
   padding: 0;
-  font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+  font-weight: 400;
   text-transform: none;
   background-color: transparent;
 }
@@ -1090,9 +1091,9 @@ body {
 .sort-title {
   max-width: 350px;
   margin: 0;
-  font-weight: 700;
   font-size: 30px;
   line-height: 39px;
+  font-weight: 700;
   text-transform: uppercase;
   color: #000000;
 }
@@ -1115,9 +1116,9 @@ body {
   padding: 10px 17px;
   padding-right: 36px;
   font-family: inherit;
+  font-style: normal;
   font-size: 18px;
   line-height: 23px;
-  font-style: normal;
   font-weight: 400;
   color: #333333;
   background-image: url("../images/icons/pointer-bottom.svg");
@@ -1245,9 +1246,9 @@ body {
 
 .residence-title {
   margin: 0;
-  font-weight: 700;
   font-size: 24px;
   line-height: 31px;
+  font-weight: 700;
   color: #000000;
 }
 
@@ -1281,7 +1282,7 @@ body {
 .residence-button {
   display: block;
   width: 133px;
-  height: 37px;
+  min-height: 37px;
   padding: 10px;
   border-radius: 4px;
 }
@@ -1304,7 +1305,7 @@ body {
 
 .residence-button-add {
   width: 140px;
-  height: 37px;
+  min-height: 37px;
   padding: 10px;
   background-color: #83B3D3;
   border-radius: 4px;
@@ -1412,6 +1413,7 @@ body {
   width: 620px;
   min-height: 60px;
   margin: 0 auto;
+  padding: 5px 20px;
   font-size: 20px;
   line-height: 26px;
   background-color: #83B3D3;
@@ -1431,12 +1433,12 @@ body {
 .pagination-link {
   display: block;
   width: 55px;
-  height: 55px;
+  min-height: 55px;
   padding-top: 14px;
   padding-bottom: 14px;
-  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -1565,9 +1567,9 @@ body {
   margin: 0;
   margin-left: -2px;
   margin-bottom: 59px;
-  font-weight: bold;
   font-size: 30px;
   line-height: 40px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -1598,16 +1600,16 @@ body {
 .modal-form-title {
   width: 155px;
   padding-right: 10px;
-  font-weight: bold;
   font-size: 18px;
   line-height: 40px;
+  font-weight: 700;
 }
 
 .modal-form-input {
   font-family: inherit;
-  font-weight: bold;
   font-size: 18px;
   line-height: 40px;
+  font-weight: 700;
   color: #000000;
   background-color: #F2F2F2;
   border: 0;
@@ -1659,9 +1661,9 @@ body {
   top: 50px;
   left: 155px;
   width: 420px;
-  font-weight: normal;
   font-size: 16px;
   line-height: 28px;
+  font-weight: 400;
   color: #333333;
 }
 
@@ -1760,8 +1762,8 @@ body {
   opacity: 0.5;
 }
 
-.tooltip-button:hover+.tooltip-text,
-.tooltip-button:focus+.tooltip-text {
+.tooltip-button:hover + .tooltip-text,
+.tooltip-button:focus + .tooltip-text {
   display: block;
 }
 
@@ -1772,9 +1774,9 @@ body {
   display: none;
   width: 256px;
   padding: 20px 18px 23px 22px;
-  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   color: #FFFFFF;
   background-color: #333333;
   border-radius: 10px;
