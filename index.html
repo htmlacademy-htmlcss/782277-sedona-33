@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   </head>
 
   <body>
@@ -78,25 +80,15 @@
                 <ul class="advantages-sublist reset-list">
                   <li class="advantages-subitem advantages-subitem-residence">
                     <h4 class="advantages-title">Жильё</h4>
-                    <p class="advantages-description">
-                      Рекомендуем пожить<br>
-                      в настоящем мотеле,<br>
-                      всё как в кино!
-                    </p>
+                    <p class="advantages-description">Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!</p>
                   </li>
                   <li class="advantages-subitem advantages-subitem-food">
                     <h4 class="advantages-title">Еда</h4>
-                    <p class="advantages-description">
-                      Всегда заказывайте<br>
-                      топовый фирменный бургер, вы не разочаруетесь!
-                    </p>
+                    <p class="advantages-description">Всегда заказывайте<br> топовый фирменный бургер, вы не разочаруетесь!</p>
                   </li>
                   <li class="advantages-subitem advantages-subitem-souvenirs">
                     <h4 class="advantages-title">Сувениры</h4>
-                    <p class="advantages-description">
-                      Не только китайского,<br>
-                      но и настоящего местного производства!
-                    </p>
+                    <p class="advantages-description">Не только китайского,<br> но и настоящего местного производства!</p>
                   </li>
                 </ul>
               </div>
@@ -132,19 +124,13 @@
         <section class="search">
           <h2 class="visually-hidden">Поиск гостигицы в Седоне</h2>
           <p class="search-slogan">Заинтересовались?</p>
-          <p class="search-text">
-            Укажите предполагаемые даты поездки,<br>
-            и мы покажем вам лучшие предложения гостиниц в Седоне
-          </p>
+          <p class="search-text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <button class="button search-button" type="button">Поиск гостиницы в Седоне</button>
         </section>
 
         <section class="subscribe subscribe-index">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-text">
-            Только полезная информация и никакого спама,<br>
-            честное бойскаутское!
-          </p>
+          <p class="subscribe-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form  class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="subscribe-form-email" type="email" name="subscribe-form-email" placeholder="Ваш e-mail">
             <button class="button subscribe-form-button" type="submit">Подписаться</button>
@@ -189,6 +175,77 @@
           </svg>
         </a>
       </footer>
+    </div>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-book">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <p class="modal-form-row">
+              <label class="modal-form-label">
+                <span class="modal-form-title">Дата заезда:</span>
+                <input class="modal-form-input modal-form-input-large" type="text" name="data-check-in" placeholder="27 апреля 2020">
+                <span class="mark-input-large"></span>
+              </label>
+              <span class="modal-form-text modal-form-text-error">Мы не можем отправить вас в прошлое.</span>
+            </p>
+
+            <p class="modal-form-row">
+              <label class="modal-form-label">
+                <span class="modal-form-title">Дата выезда:</span>
+                <input class="modal-form-input modal-form-input-large" type="text" name="data-check-out" placeholder="1 сентября 2021">
+                <span class="mark-input-large"></span>
+              </label>
+              <span class="modal-form-text">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+
+            <p class="modal-form-row">
+              <span class="input-small-wrapper">
+                <label class="modal-form-label">
+                  <span class="modal-form-title">Взрослые:</span>
+                  <input class="modal-form-input modal-form-input-small" type="number" name="adult" value="2">
+                </label>
+
+                <button class="button button-input button-remove" type="button">
+                  <span class="visually-hidden">Убрать</span>
+                </button>
+                <button class="button button-input button-add" type="button">
+                  <span class="visually-hidden">Добавить</span>
+                </button>
+              </span>
+
+              <span class="input-small-wrapper">
+                <label class="modal-form-label">
+                  <span class="modal-form-title">Дети:</span>
+                  <input class="modal-form-input modal-form-input-small" type="number" name="children" value="1">
+                </label>
+
+                <button class="button button-input button-remove" type="button">
+                  <span class="visually-hidden">Убрать</span>
+                </button>
+                <button class="button button-input button-add" type="button">
+                  <span class="visually-hidden">Добавить</span>
+                </button>
+
+                <span class="tooltip">
+                  <button class="button tooltip-button" type="button" aria-labelledby="tooltip-label">
+                    <span class="visually-hidden">Показать дополнительную информацию</span>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+            </p>
+
+            <button class="button modal-form-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>

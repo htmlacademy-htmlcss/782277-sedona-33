@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   </head>
 
   <body>
@@ -126,22 +128,22 @@
               <div class="cost">
                 <div class="cost-control">
                   <label class="cost-item">
-                    <input class="cost-input" type="text" name="min-price" value="0">
+                    <input class="cost-input" type="number" name="min-price" value="0">
                     <span class="cost-label">от</span>
                   </label>
                   <label class="cost-item">
-                    <input class="cost-input" type="text" name="max-price" value="9000">
+                    <input class="cost-input" type="number" name="max-price" value="9000">
                     <span class="cost-label">до</span>
                   </label>
                 </div>
                 <div class="cost-scale">
-                  <div class="cost-scale-pin pin-min" tabindex="0">
+                  <button class="button cost-scale-pin pin-min" type="button">
                     <span class="visually-hidden">Изменение минимальной цены жилья</span>
-                  </div>
-                  <div class="cost-scale-level"></div>
-                  <div class="cost-scale-pin pin-max" tabindex="0">
+                  </button>
+                  <div class="cost-scale-level" style="left: 10px; width: 75%;"></div>
+                  <button class="button cost-scale-pin pin-max" type="button">
                     <span class="visually-hidden">Изменение максимальной цены жилья</span>
-                  </div>
+                  </button>
                 </div>
               </div>
             </fieldset>
@@ -159,7 +161,7 @@
 
             <p class="sort-title">Найдено гостиниц: <span class="sort-count">38</span></p>
 
-            <div class="sort-list-wrappen">
+            <div class="sort-list-wrapper">
               <select class="sort-list" aria-label="Сортировка">
                 <option value="cheap">Сначала дешёвые</option>
                 <option value="expensive">Сначала дорогие</option>
@@ -306,7 +308,7 @@
 
             <div class="page-control-view">
               <p class="page-view-title">Гостиниц на странице:</p>
-              <div class="page-view-wrappen">
+              <div class="page-view-wrapper">
                 <select class="page-view-list" aria-label="Гостиниц на странице">
                   <option value="4">4</option>
                   <option value="8">8</option>
@@ -319,10 +321,7 @@
 
         <section class="subscribe">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-text">
-            Только полезная информация и никакого спама,<br>
-            честное бойскаутское!
-          </p>
+          <p class="subscribe-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form  class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="subscribe-form-email" type="email" name="subscribe-form-email" placeholder="Ваш e-mail">
             <button class="button subscribe-form-button" type="submit">Подписаться</button>
@@ -367,6 +366,77 @@
           </svg>
         </a>
       </footer>
+    </div>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-book">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <p class="modal-form-row">
+              <label class="modal-form-label">
+                <span class="modal-form-title">Дата заезда:</span>
+                <input class="modal-form-input modal-form-input-large" type="text" name="data-check-in" placeholder="27 апреля 2020">
+                <span class="mark-input-large"></span>
+              </label>
+              <span class="modal-form-text modal-form-text-error">Мы не можем отправить вас в прошлое.</span>
+            </p>
+
+            <p class="modal-form-row">
+              <label class="modal-form-label">
+                <span class="modal-form-title">Дата выезда:</span>
+                <input class="modal-form-input modal-form-input-large" type="text" name="data-check-out" placeholder="1 сентября 2021">
+                <span class="mark-input-large"></span>
+              </label>
+              <span class="modal-form-text">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+
+            <p class="modal-form-row">
+              <span class="input-small-wrapper">
+                <label class="modal-form-label">
+                  <span class="modal-form-title">Взрослые:</span>
+                  <input class="modal-form-input modal-form-input-small" type="number" name="adult" value="2">
+                </label>
+
+                <button class="button button-input button-remove" type="button">
+                  <span class="visually-hidden">Убрать</span>
+                </button>
+                <button class="button button-input button-add" type="button">
+                  <span class="visually-hidden">Добавить</span>
+                </button>
+              </span>
+
+              <span class="input-small-wrapper">
+                <label class="modal-form-label">
+                  <span class="modal-form-title">Дети:</span>
+                  <input class="modal-form-input modal-form-input-small" type="number" name="children" value="1">
+                </label>
+
+                <button class="button button-input button-remove" type="button">
+                  <span class="visually-hidden">Убрать</span>
+                </button>
+                <button class="button button-input button-add" type="button">
+                  <span class="visually-hidden">Добавить</span>
+                </button>
+
+                <span class="tooltip">
+                  <button class="button tooltip-button" type="button" aria-labelledby="tooltip-label">
+                    <span class="visually-hidden">Показать дополнительную информацию</span>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+            </p>
+
+            <button class="button modal-form-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>
