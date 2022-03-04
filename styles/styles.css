@@ -58,7 +58,8 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -919,12 +920,14 @@ body {
   color: #ffffff;
   background-color: transparent;
   border: 2px solid #ffffff;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .cost-input::-webkit-outer-spin-button,
 .cost-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1125,7 +1128,6 @@ body {
   border: 2px solid #e6e6e6;
   border-radius: 4px;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
 }
@@ -1678,12 +1680,14 @@ body {
   padding: 5px 51px;
   text-align: center;
   outline: none;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .modal-form-input-small::-webkit-outer-spin-button,
 .modal-form-input-small::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
